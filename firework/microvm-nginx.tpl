@@ -33,5 +33,5 @@ if [[ ! $formatted ]]; then
 fi
 mount /dev/vdb /web-data
 wget -O /web-data/index.html http://raw.githubusercontent.com/km4rcus/opennebula-firework-example/master/html/index.html
-nginx -c /etc/nginx/nginx.conf"
+setsid -f nginx -c /etc/nginx/nginx.conf > /dev/null 2>&1 &"
 ]
